@@ -15,6 +15,6 @@ Feel free to explore the different projects listed above. Each folder has a READ
 Select the project folder of interest, and follow the instructions and information provided on the README file.
 
 ## Feedback
-If you have any feedback, suggestions, or questions, feel free to reach out to me through [zenaanthony2@gmail.com].
+If you have any feedback, suggestions, or questions, feel free to reach out to me through zenaanthony2@gmail.com.
 
 Thanks for the support!
