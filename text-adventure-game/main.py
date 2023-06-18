@@ -1,5 +1,6 @@
 # Text adventure game using if..elif..else statements.
 import ascii_art 
+from clearscreen import clear
 
 # Introduction
 print(ascii_art.fairy_queen1)
@@ -7,6 +8,8 @@ print("Hello! I'm Estelle, the fairy queen. I am so happy to meet you. You've ar
 print("But first, tell me your name Great Adventurer!")
 
 player_name = input(">")
+
+clear()
 
 print(ascii_art.fairy_queen2)
 print(f"{player_name}! A name worthy of a brave warrior such as yourself!")
@@ -19,6 +22,8 @@ while True:
 	start = input(">").upper()
 	if start == "Y": break
 
+clear()
+
 print("========== LOCATION: THE LAND OF FURDOR WHERE THE BEAST KING RULES ==========")
 print(ascii_art.spider)
 print("========== BEWARE THE LURKING CREATURES ==========")
@@ -28,14 +33,18 @@ print("Where do you want to hide? Enter 'left' to go to the shrubbery or 'right'
 
 choice_path = input(">").lower()
 
+clear()
+
 # Story line options based of if..elif..else statements
 if choice_path == "left":
 	print(ascii_art.lake)
 	print("Woah! You fell right into the rabbit hole hidden in the shrubbery. After what felt like hours, you landed in a heap on the wet ground. You've got a cut on your leg from the fall, that makes it difficult to walk.")
 	print("You're in luck though! There are two lakes in this underground cave. One looks ominous with dark, murky water that gives off a horrible stench. The other lake is crystal clear without an animal in sight.")
-	print("You need to clean your wounds before finding an exit. Enter 'dark' to use the water from the dark lake or 'clear' to use the water from the clear lake.")
+	print("You need to clean your wounds before finding an exit. Enter 'dark' to use the water from the dark lake or 'crystal' to use the water from the clear lake.")
 
 	lake_choice = input(">").lower()
+
+	clear()
 
 	if lake_choice == "dark":
 		print(ascii_art.tunnel)
@@ -44,6 +53,9 @@ if choice_path == "left":
 		print("Are you prepared to fight or run off with the papers? Enter 'fight' to grab a weapon or 'papers' to grab the documents.")
 
 		fight_flight = input(">")
+
+		clear()
+
 		print("========== THE BEAST KING ENTERS ==========")
 
 		if fight_flight == "fight":
@@ -57,7 +69,7 @@ if choice_path == "left":
 			print("Oh no! Nature magic was used to protect the documents. The spell changes you into a cat. At least you're a cute and cuddly kitten, and the Beast King dotes on you :)")
 			print(ascii_art.game_over)
 
-	elif lake_choice == "clear":
+	elif lake_choice == "crystal":
 		print(ascii_art.octopus)
 		print("Ahh! The clear water was an illusion. Hiding in the water is a giant octopus that drags you down under to be it's first meal in a long time!")
 		print(ascii_art.game_over)
