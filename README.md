@@ -7,7 +7,7 @@ The code in this repository is available under the [Apache License 2.0](LICENSE)
 ## Projects
 Below is a list of the practice projects included in this repository:
 
-- name: description
+- text-adventure-game: The user selects different choices that affect the game's storyline. Utilizes ASCII art, conditional statements, and a while loop. Saved ASCII art on a different file for code readability.
 
 Feel free to explore the different projects listed above. Each folder has a README file that provides more information.
 
