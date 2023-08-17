@@ -11,7 +11,10 @@ Below is a list of the practice projects included in this repository:
     text-adventure-game: The user selects different choices that affect the game's storyline. Utilizes ASCII art, conditional statements, while loop, and user-defined clear() method to clear terminal/console screen.
   </li>
   <li>
-    rock-paper-scissors: The user plays against the computer that produces random results against the player's choices. Utilizes ASCIII art, conditional statements, while loop, user-defined clear() method, and random module. 
+    rock-paper-scissors: The user plays against the computer that produces random results against the player's choices. Utilizes ASCII art, conditional statements, while loop, user-defined clear() method, and random module. 
+  </li>
+    <li>
+    password-generator: The user can generate a new password with randomized letters, numbers, and symbols based on the totals entered from the prompts. Utilizes random module (shuffle and choice method) and for loops.
   </li>
 </ul>
 
