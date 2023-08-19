@@ -5,8 +5,6 @@ import random, ascii, words, clearscreen
 # Chooses word from word list and calculates length of word
 chosen_word = random.choice(words.word_list)
 word_length = len(chosen_word)
-
-# Player has six lives and end of game is set to False
 end_game = False
 lives = 6 
 
@@ -21,17 +19,20 @@ display = []
 for _ in range(word_length):
     display += '_'
 
+# Loops through game until player wins or loses
 while not end_game:
     guess = input('Guess a letter: ').lower()
     clearscreen.clear()
 
-    if guess in display:
-      print(f'You have already guessed the letter, {guess}.')
+    if guess in words.letters:
+       words.letters.remove(guess)
+       if guess in display:
+          print(f'You have already guessed the letter, {guess}. Remaining letters: {", ".join(words.letters)}')
 
     for position in range(word_length):
       letter = chosen_word[position]
       # Testing code - comment out after testing
-      print(f'Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}')
+      # print(f'Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}')
 
       if letter == guess:
         display[position] = letter
