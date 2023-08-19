@@ -23,12 +23,14 @@ for _ in range(word_length):
 
 while not end_game:
     guess = input('Guess a letter: ').lower()
+    clearscreen.clear()
 
     if guess in display:
       print(f'You have already guessed the letter, {guess}.')
 
     for position in range(word_length):
       letter = chosen_word[position]
+      # Testing code - comment out after testing
       print(f'Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}')
 
       if letter == guess:
