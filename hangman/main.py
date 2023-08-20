@@ -29,6 +29,7 @@ display = ['_'] * word_length
 
 # Prints the hangman logo at the start of the game
 print(ascii.logo)
+print(f'\nWord: {" ".join(display)}')
 
 # Testing code - comment out after testing
 # print(f'Word is: {chosen_word}.')
