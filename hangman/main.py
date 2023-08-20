@@ -1,27 +1,41 @@
-# A hangman game using random module with loops, if...else conditions, and formatted strings.
+# Hangman Game: Allows you to play the classic game of Hangman. Crafted using random module, loops, if...else conditions, and custom functions.
 
 import random, ascii, words, clearscreen
 
-# Chooses word from word list and calculates length of word
+# Function to get user input
+def get_user_input():
+   return input('Guess a letter: ').lower()
+
+# Function to update the display based on the guessed letter
+def update_display(chosen_word, guess, display):
+   for position, letter, in enumerate(chosen_word):
+      if letter == guess:
+         display[position] = letter
+
+# Function to display the game state
+def display_game_state(lives, remaining_letters):
+   print(ascii.stages[lives])
+   print(f'You have {lives} lives left. Remaining letters: {", ".join(remaining_letters)}')
+   print(f'Word: {" ".join(display)}')
+
+# Variables
 chosen_word = random.choice(words.word_list)
 word_length = len(chosen_word)
 end_game = False
 lives = 6 
 
+# Create holders for the chosen word
+display = ['_'] * word_length
+
 # Prints the hangman logo at the start of the game
 print(ascii.logo)
 
 # Testing code - comment out after testing
-print(f'Psst, the solution is {chosen_word}.')
+print(f'Word is: {chosen_word}.')
 
-# Create holders for chosen word
-display = []
-for _ in range(word_length):
-    display += '_'
-
-# Loops through game until player wins or loses
+# Main game loop
 while not end_game:
-    guess = input('Guess a letter: ').lower()
+    guess = get_user_input()
     clearscreen.clear()
 
     if guess in words.letters:
@@ -29,25 +43,18 @@ while not end_game:
        if guess in display:
           print(f'You have already guessed the letter, {guess}. Remaining letters: {", ".join(words.letters)}')
 
-    for position in range(word_length):
-      letter = chosen_word[position]
-      # Testing code - comment out after testing
-      # print(f'Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}')
-
-      if letter == guess:
-        display[position] = letter
+    update_display(chosen_word, guess, display)
 
     if guess not in chosen_word:
-       lives -= 1
-       print(f'The letter {guess} is not in the word.')
+      lives -= 1
+      print(f'The letter {guess} is not in the word.')
 
-       if lives == 0:
-          end_game = True
-          print('You lose.')
+    display_game_state(lives, words.letters)
+
+    if lives == 0:
+        end_game = True
+        print('You lose :( ')
 
     if '_' not in display:
-       end_game = True
-       print('You win.')
-
-    print(ascii.stages[lives])
-
+      end_game = True
+      print('You win :) ')
