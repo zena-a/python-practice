@@ -16,7 +16,7 @@ def update_display(chosen_word, guess, display):
 def display_game_state(lives, remaining_letters):
    print(ascii.stages[lives])
    print(f'You have {lives} lives left. Remaining letters: {", ".join(remaining_letters)}')
-   print(f'Word: {" ".join(display)}')
+   print(f'\nWord: {" ".join(display)}')
 
 # Variables
 chosen_word = random.choice(words.word_list)
@@ -31,30 +31,34 @@ display = ['_'] * word_length
 print(ascii.logo)
 
 # Testing code - comment out after testing
-print(f'Word is: {chosen_word}.')
+# print(f'Word is: {chosen_word}.')
 
 # Main game loop
 while not end_game:
     guess = get_user_input()
     clearscreen.clear()
 
+    # Removes guessed letter from the list
     if guess in words.letters:
        words.letters.remove(guess)
+       # Notifies user if the letter was already guessed
        if guess in display:
-          print(f'You have already guessed the letter, {guess}. Remaining letters: {", ".join(words.letters)}')
+          print(f'You have already guessed the letter, {guess}.')
 
     update_display(chosen_word, guess, display)
 
+    # Deducts from player's lives if wrong letter was chosen
     if guess not in chosen_word:
       lives -= 1
       print(f'The letter {guess} is not in the word.')
 
     display_game_state(lives, words.letters)
 
+    # Prints win or lose message and the chosen word
     if lives == 0:
         end_game = True
-        print('You lose :( ')
+        print(f'\nThe word was: {chosen_word}. \nYou lose! :( ')
 
     if '_' not in display:
       end_game = True
-      print('You win :) ')
+      print(f'\nYou win! :). \nThe word was: {chosen_word}.')
