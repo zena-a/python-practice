@@ -13,8 +13,11 @@ Below is a list of the practice projects included in this repository:
   <li>
     rock-paper-scissors: The user plays against the computer that produces random results against the player's choices. Utilizes ASCII art, conditional statements, while loop, user-defined clear() method, and random module. 
   </li>
-    <li>
+  <li>
     password-generator: The user can generate a new password with randomized letters, numbers, and symbols based on the totals entered from the prompts. Utilizes random module (shuffle and choice method) and for loops.
+  </li>
+  <li>
+    hangman game: A classic hangman game where the user has to guess the correct letters contained in the chosen word. Utilizes custom functions, random module, and iterating through a sequence (enumerate method).
   </li>
 </ul>
 
