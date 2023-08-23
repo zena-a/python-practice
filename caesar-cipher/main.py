@@ -13,8 +13,8 @@ def caesar_cipher(text, shift, direction):
     for char in text:
         if char.isalpha():
             if char.isupper():
-                # ord(char) returns the ASCII value of a character
-                # chr(ascii_value) converts an ASCII value back to it's corresponding character
+                # ord(char) returns the unicode number of a character
+                # chr(number) converts unicode number back to it's corresponding character
                 shifted_char = chr((ord(char) - 65 + shift) % 26 + 65) # Shift uppercase letters
             else:
                 shifted_char = chr((ord(char) - 97 + shift) % 26 + 97) # Shift lowercase letters

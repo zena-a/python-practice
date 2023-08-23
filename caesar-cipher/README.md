@@ -4,6 +4,7 @@ This program implements the classic Caesar Cipher technique, a historic encrypti
 ## My Learning
 - Applying the caesar cipher encryption and decryption algorithms.
 - Handling string manipulation and character shifting in Python. 
+- Read documentation on string methods such as isalpha() and isupper(), as well as chr() and ord() unicode methods. 
 - Implementing user input validation for direction selection. 
 
 ## How To Use
