@@ -19,6 +19,12 @@ Below is a list of the practice projects included in this repository:
   <li>
     hangman game: A classic hangman game where the user has to guess the correct letters contained in the chosen word. Utilizes custom functions, random module, and iterating through a sequence (enumerate method).
   </li>
+  <li>
+    caesar-cipher: The classic Caesar Cipher encryption technique that takes user input for a message and a shift value to encrypt or decrypt the message. Demonstrates fundamental cryptography concepts and string manipulation in Python (isalpha() and isupper) as well as converting character types to their unicode value.
+  </li>
+  <li>
+    highest-bidder: A blind auction using a dictionary to store bidders' names and bids. Compares the bids to find the highest one, once there are no more bidders, and declares the winner.
+  </li>
 </ul>
 
 Feel free to explore the different projects listed above. Each folder has a README file that provides more information.
