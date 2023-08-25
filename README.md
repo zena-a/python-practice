@@ -25,6 +25,9 @@ Below is a list of the practice projects included in this repository:
   <li>
     highest-bidder: A blind auction using a dictionary to store bidders' names and bids. Compares the bids to find the highest one, once there are no more bidders, and declares the winner.
   </li>
+  <li>
+    standard-calculator: Simulates the functions of a standard calculator. Supports basic arithmetic operations and utilizes modular design with custom funcitons, dictionaries, and recursion for efficient computation.
+  </li>
 </ul>
 
 Feel free to explore the different projects listed above. Each folder has a README file that provides more information.
