@@ -37,12 +37,14 @@ operations = {
   }
 
 # Main function to gather input and manage the flow of the program
-def main():
-  num1 = float(input("The first number: "))
+def main(num1=0):
+  if num1 == 0:
+    num1 = float(input("The first number: "))
+  else:
+    print(f"Your first number is: {num1}")
 
   # Display available operations
-  for symbol in operations:
-    print(", ".join(operations))
+  print(", ".join(operations))
 
   selected_operation = input("Pick an operation: ")
   num2 = float(input("The second number: "))
@@ -56,7 +58,8 @@ def main():
 
   if should_continue == "y":
     clear()
-    main() # Recursion: The main function calls itself to continue the calculation
+    # Recursion: The main function calls itself to continue the calculation
+    main(answer) # Pass the updated answer as num1 for the next calculation
   else:
     print("Goodbye!")
 
