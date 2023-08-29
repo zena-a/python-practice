@@ -28,6 +28,9 @@ Below is a list of the practice projects included in this repository:
   <li>
     standard-calculator: Simulates the functions of a standard calculator. Supports basic arithmetic operations and utilizes modular design with custom funcitons, dictionaries, and recursion for efficient computation.
   </li>
+  <li>
+    blackjack-game: Implementation of the class card game "Blackjack", where user has to compete against a computer dealier to achieve a hand value as close to 21 without exceeding it. Utilizes random, os, and platform module, ascii art, custom functions and conditional statements to create an interactive gameplay experience.
+  </li>
 </ul>
 
 Feel free to explore the different projects listed above. Each folder has a README file that provides more information.
