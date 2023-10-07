@@ -29,7 +29,10 @@ Below is a list of the practice projects included in this repository:
     standard-calculator: Simulates the functions of a standard calculator. Supports basic arithmetic operations and utilizes modular design with custom funcitons, dictionaries, and recursion for efficient computation.
   </li>
   <li>
-    blackjack-game: Implementation of the class card game "Blackjack", where user has to compete against a computer dealier to achieve a hand value as close to 21 without exceeding it. Utilizes random, os, and platform module, ascii art, custom functions and conditional statements to create an interactive gameplay experience.
+    blackjack-game: Implementation of the classic card game "Blackjack", where the user has to compete against a computer dealier to achieve a hand value as close to 21 without exceeding it. Utilizes random, os, and platform module, ascii art, custom functions and conditional statements to create an interactive gameplay experience.
+  </li>
+  <li>
+    guess-the-number: Implementation of the guess the number game, where the user has to guess the number randomly selected by the computer. If they guess the correct number before their attempts finish, they will win the game. Utilizes random module, ascii art, custom functions, iteration constructs, and selection statements to create a simple yet interactive gameplay experience.
   </li>
 </ul>
 
